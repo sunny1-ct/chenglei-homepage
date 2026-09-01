@@ -55,6 +55,11 @@
   .card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
   .card-head h3{font-size:18px;color:var(--primary);}
   .tag{font-size:13px;color:var(--muted);background:var(--bg);padding:3px 10px;border-radius:12px;}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:8px 20px;border-radius:6px;font-size:14px;transition:.2s;
+  }
+  .btn:hover{background:var(--primary-light);}
 
   /* 作品集 5 页图片展示 */
   .portfolio-page{
@@ -105,7 +110,10 @@
   <div class="card">
     <div class="card-head">
       <h3>爬壁机器人项目作品集</h3>
-      <span class="tag">共 5 页</span>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <span class="tag">共 5 页</span>
+        <a class="btn" href="作品集.pdf" download>⬇ 下载 PDF</a>
+      </div>
     </div>
     <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">
       涵盖多款磁吸附爬壁机器人的整机装配、电气接线、样机实地测试与所获荣誉，共 5 页内容展示如下。
