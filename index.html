@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>程磊 · 个人主页</title>
+<style>
+  :root{
+    --primary:#143264;
+    --primary-light:#2a5aa8;
+    --accent:#0a7dbf;
+    --bg:#f4f6f9;
+    --card:#ffffff;
+    --text:#2b2f36;
+    --muted:#6b7280;
+    --line:#e3e8ef;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.7;
+  }
+  .container{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* 头部 */
+  header{
+    background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
+    color:#fff;padding:56px 0 48px;
+  }
+  .header-inner{display:flex;flex-wrap:wrap;gap:28px;align-items:center;}
+  .avatar{
+    width:120px;height:150px;border-radius:10px;object-fit:cover;
+    border:3px solid rgba(255,255,255,.6);box-shadow:0 6px 18px rgba(0,0,0,.25);
+  }
+  .header-text{flex:1;min-width:260px;}
+  .header-text h1{font-size:40px;letter-spacing:2px;margin-bottom:6px;}
+  .header-text .sub{font-size:16px;opacity:.92;margin-bottom:10px;}
+  .header-text .role{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);
+    padding:4px 14px;border-radius:20px;font-size:14px;}
+  .contact{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;opacity:.95;}
+  .contact a{color:#fff;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.5);}
+  .contact a:hover{border-bottom-color:#fff;}
+
+  /* 主区域 */
+  main{padding:40px 0 60px;}
+  .section-title{
+    font-size:24px;font-weight:700;color:var(--primary);
+    display:flex;align-items:center;gap:10px;margin:34px 0 18px;
+  }
+  .section-title::after{content:"";flex:1;height:2px;background:var(--line);}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 2px 10px rgba(20,50,100,.06);padding:20px;margin-bottom:20px;
+  }
+  .card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
+  .card-head h3{font-size:18px;color:var(--primary);}
+  .tag{font-size:13px;color:var(--muted);background:var(--bg);padding:3px 10px;border-radius:12px;}
+
+  /* PDF 预览 */
+  .pdf-frame{width:100%;height:640px;border:1px solid var(--line);border-radius:8px;background:#fafbfc;}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:8px 20px;border-radius:6px;font-size:14px;transition:.2s;
+  }
+  .btn:hover{background:var(--primary-light);}
+
+  /* 视频 */
+  video{width:100%;border-radius:8px;background:#000;display:block;}
+  .video-desc{font-size:14px;color:var(--muted);margin-top:10px;}
+
+  /* 页脚 */
+  footer{background:var(--primary);color:rgba(255,255,255,.85);padding:26px 0;text-align:center;font-size:14px;}
+
+  @media (max-width:640px){
+    .header-inner{justify-content:center;text-align:center;}
+    .pdf-frame{height:440px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <img class="avatar" src="avatar.jpg" alt="程磊">
+    <div class="header-text">
+      <h1>程磊</h1>
+      <div class="sub">机械工程硕士 · 特种作业爬壁机器人方向</div>
+      <div>
+        <span class="role">浙江工业大学 · 机械工程学院</span>
+        <span class="role" style="margin-left:8px;">中国科学院宁波材料技术与工程研究所（联合培养）</span>
+      </div>
+      <div class="contact">
+        <span>📞 15192132821</span>
+        <span>✉️ <a href="mailto:chenglei@nimte.ac.cn">chenglei@nimte.ac.cn</a></span>
+        <span>📍 浙江省宁波市</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="section-title">项目作品集</div>
+  <div class="card">
+    <div class="card-head">
+      <h3>爬壁机器人项目作品集</h3>
+      <a class="btn" href="作品集.pdf" download>⬇ 下载 PDF</a>
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">
+      涵盖多款磁吸附爬壁机器人的整机装配、电气接线、样机实地测试与所获荣誉，点击下方预览或下载查看。
+    </p>
+    <iframe class="pdf-frame" src="作品集.pdf" title="爬壁机器人项目作品集"></iframe>
+  </div>
+
+  <div class="section-title">视频合集</div>
+  <div class="card">
+    <div class="card-head">
+      <h3>项目演示视频合集</h3>
+      <span class="tag">时长 1:49</span>
+    </div>
+    <video controls preload="metadata" poster="" playsinline>
+      <source src="resume_video.mp4" type="video/mp4">
+      您的浏览器不支持视频播放，请<a href="resume_video.mp4" download>下载视频</a>查看。
+    </video>
+    <p class="video-desc">爬壁机器人样机装配、壁面作业与实地测试集锦。视频较大（约 16MB），建议在 WiFi 环境下播放。</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    程磊 · 机械工程 · 浙江工业大学 / 中科院宁波材料所联合培养 &nbsp;|&nbsp;
+    📞 15192132821 &nbsp; ✉️ chenglei@nimte.ac.cn
+  </div>
+</footer>
+
+</body>
+</html>
