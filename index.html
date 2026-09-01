@@ -56,13 +56,15 @@
   .card-head h3{font-size:18px;color:var(--primary);}
   .tag{font-size:13px;color:var(--muted);background:var(--bg);padding:3px 10px;border-radius:12px;}
 
-  /* PDF 预览 */
-  .pdf-frame{width:100%;height:640px;border:1px solid var(--line);border-radius:8px;background:#fafbfc;}
-  .btn{
-    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
-    padding:8px 20px;border-radius:6px;font-size:14px;transition:.2s;
+  /* 作品集 5 页图片展示 */
+  .portfolio-page{
+    display:block;width:100%;max-width:780px;margin:0 auto 18px;
+    border:1px solid var(--line);border-radius:8px;
+    box-shadow:0 2px 10px rgba(20,50,100,.08);background:#fff;
   }
-  .btn:hover{background:var(--primary-light);}
+  .page-label{
+    text-align:center;font-size:13px;color:var(--muted);margin:-8px 0 20px;
+  }
 
   /* 视频 */
   video{width:100%;border-radius:8px;background:#000;display:block;}
@@ -73,7 +75,6 @@
 
   @media (max-width:640px){
     .header-inner{justify-content:center;text-align:center;}
-    .pdf-frame{height:440px;}
   }
 </style>
 </head>
@@ -104,12 +105,26 @@
   <div class="card">
     <div class="card-head">
       <h3>爬壁机器人项目作品集</h3>
-      <a class="btn" href="作品集.pdf" download>⬇ 下载 PDF</a>
+      <span class="tag">共 5 页</span>
     </div>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">
-      涵盖多款磁吸附爬壁机器人的整机装配、电气接线、样机实地测试与所获荣誉，点击下方预览或下载查看。
+    <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">
+      涵盖多款磁吸附爬壁机器人的整机装配、电气接线、样机实地测试与所获荣誉，共 5 页内容展示如下。
     </p>
-    <iframe class="pdf-frame" src="作品集.pdf" title="爬壁机器人项目作品集"></iframe>
+
+    <img class="portfolio-page" src="p1.jpg" alt="作品集第1页">
+    <div class="page-label">第 1 页 · 封面与项目概览</div>
+
+    <img class="portfolio-page" src="p2.jpg" alt="作品集第2页">
+    <div class="page-label">第 2 页 · 样机装配与调试</div>
+
+    <img class="portfolio-page" src="p3.jpg" alt="作品集第3页">
+    <div class="page-label">第 3 页 · 样机实地测试（上）</div>
+
+    <img class="portfolio-page" src="p4.jpg" alt="作品集第4页">
+    <div class="page-label">第 4 页 · 样机实地测试（下）</div>
+
+    <img class="portfolio-page" src="p5.jpg" alt="作品集第5页">
+    <div class="page-label">第 5 页 · 荣誉证书</div>
   </div>
 
   <div class="section-title">视频合集</div>
